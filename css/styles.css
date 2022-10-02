@@ -9,10 +9,22 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
     color: var(--primary-text-color);
     letter-spacing: 0.03em
 }
+
+.visually-hidden {
+     position: absolute;
+     white-space: nowrap;
+     width: 1px;
+     height: 1px;
+     overflow: hidden;
+     border: 0;
+     padding: 0;
+     clip: rect(0 0 0 0);
+     clip-path: inset(50%);
+     margin: -1px;
+ }
 
 /* Шапка */
 .header{
@@ -23,7 +35,7 @@ body{
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
-    line-height: 119% ;
+    line-height: 1.19;
     color: var(--accent-color);
     text-decoration: none;
 }
@@ -44,7 +56,7 @@ body{
 .site-nav a, .auth-nav a {
     font-weight: 500;
     font-size: 14px;
-    line-height: 114%;
+    line-height: 1.14;
     text-decoration: none;
 }
 
@@ -73,7 +85,7 @@ body{
     color: var(--white);
     font-weight: 900;
     font-size: 44px;
-    line-height: 136%;
+    line-height: 1.36;
     text-align: center;
     text-transform: uppercase;
 }
@@ -84,13 +96,13 @@ body{
     color: var(--white);
     font-weight: 700;
     font-size: 16px;
-    line-height: 188%;
+    line-height: 1.88;
     text-align: center;
-    align-items: center;
     cursor: pointer;
 }
 
 /* Переваги */
+
 
 .advantages {
     list-style: none;
@@ -99,14 +111,14 @@ body{
 .advantages h3 {
     font-weight: 700;
     font-size: 14px;
-    line-height: 114%;
+    line-height: 1.14;
     text-transform: uppercase;
 }
 
 .advantages p {
     color: var(--secondary-text-color);
     font-size: 14px;
-    line-height: 171%;
+    line-height: 1.71;
 }
 
 /* Чим ми займаємося */
@@ -114,7 +126,7 @@ body{
 .work-title, .team-title {
     font-weight: 700;
     font-size: 36px;
-    line-height: 117%;
+    line-height: 1.17;
     text-align: center;
 }
 
@@ -134,14 +146,14 @@ body{
 .team-cards p {
     color: var(--secondary-text-color);
     font-size: 16px;
-    line-height: 119%;
+    line-height: 1.19;
     text-align: center;
 }
 
 .team h3 {
     font-weight: 500;
     font-size: 16px;
-    line-height: 119%;
+    line-height: 1.19;
     text-align: center;
 }
 
@@ -153,11 +165,10 @@ body{
 
 .contact-list {
     list-style: none;
-    text-decoration: none;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 171%;
+    line-height: 1.71;
 }
 
 .address {
@@ -169,6 +180,11 @@ body{
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
 }
+
+.contact-list a:hover, .contact-list a:focus {
+    color: var(--accent-color);
+}
+
 
 /* Портфоліо */
 
@@ -185,7 +201,7 @@ body{
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
-    line-height: 162%;
+    line-height: 1.62;
     text-align: center;
     background-color: #F5F4FA;
     cursor: pointer;
@@ -200,14 +216,14 @@ body{
 .cards-portfolio p {
     font-weight: 400;
     font-size: 16px;
-    line-height: 188%;
+    line-height: 1.88;
     color: #757575;
 
 }
 
 .cards-portfolio h2 {
     font-size: 18px;
-    line-height: 200%;
+    line-height: 2;
     letter-spacing: 0.06em;
     color: var(--primary-text-color);
 }
