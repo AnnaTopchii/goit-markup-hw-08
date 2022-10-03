@@ -101,7 +101,7 @@ body{
     cursor: pointer;
 }
 
-.button:active {
+.button:hover, .button:focus {
     background-color: #188CE8;}
 
 /* Переваги */
