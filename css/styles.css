@@ -7,6 +7,28 @@
     --secondary-bcg-color:#2F303A;
 }
 
+h1, h2, h3, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid tomato;
+}
+
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     color: var(--primary-text-color);
@@ -29,6 +51,9 @@ body{
 /* Шапка */
 .header{
     background-color: var(--white);
+    border-bottom: 1px solid #ECECEC;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .logo {
@@ -79,15 +104,24 @@ body{
 .hero {
     background-color: var(--secondary-bcg-color);
     letter-spacing: 0.06em;
-}
+    height: 600px;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    }
+
 
 .hero-title {
     color: var(--white);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 696px;
+    text-align: center;
 }
 
 .button {
@@ -99,6 +133,9 @@ body{
     line-height: 1.88;
     text-align: center;
     cursor: pointer;
+    min-width: 216px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 .button:hover, .button:focus {
@@ -106,6 +143,9 @@ body{
 
 /* Переваги */
 
+.advantages-block.section{
+    padding-bottom: 0;
+}
 
 .advantages {
     list-style: none;
@@ -116,6 +156,7 @@ body{
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .advantages p {
@@ -131,6 +172,7 @@ body{
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .work-list {
@@ -146,6 +188,14 @@ body{
     list-style: none;
 }
 
+.team-cards li {
+    padding-bottom: 30px;
+}
+
+.team-cards img {
+    margin-bottom: 30px;
+}
+
 .team-cards p {
     color: var(--secondary-text-color);
     font-size: 16px;
@@ -158,6 +208,7 @@ body{
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 
@@ -188,6 +239,23 @@ body{
     color: var(--accent-color);
 }
 
+.footer .container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer li {
+    margin-bottom: 9px;
+}
+
+.footer li:first-child {
+    margin-top: 20px;
+}
+
+.footer li:last-child {
+    margin-bottom: 0px;
+}
+
 
 /* Портфоліо */
 
@@ -215,6 +283,9 @@ body{
     color: var(--white);
 }
  
+.cards-portfolio img {
+    margin-bottom: 20px;
+}
 
 .cards-portfolio p {
     font-weight: 400;
@@ -229,4 +300,13 @@ body{
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--primary-text-color);
+    margin-bottom: 4px;
+}
+
+.nav-portfolio {
+    margin-bottom: 50px;
+}
+
+.cards-portfolio li {
+    padding-bottom: 20px;
 }
