@@ -19,6 +19,8 @@ ul {
 
 .container {
     width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
     border: 3px solid tomato;
@@ -52,8 +54,6 @@ body{
 .header{
     background-color: var(--white);
     border-bottom: 1px solid #ECECEC;
-    padding-top: 24px;
-    padding-bottom: 25px;
 }
 
 .logo {
@@ -76,6 +76,23 @@ body{
 .site-nav, .auth-nav {
     letter-spacing: 0.02em;
     list-style: none;
+    display: flex;
+}
+
+.site-nav {
+    margin-left: 93px;
+}
+
+.auth-nav {
+    margin-left: auto;
+}
+
+.site-nav > li:not(:last-child) {
+    margin-right: 50px;
+}
+
+.auth-nav > li:not(:last-child) {
+    margin-right: 50px;
 }
 
 .site-nav a, .auth-nav a {
@@ -90,7 +107,11 @@ body{
 }
 
 .site-nav a {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     color: var(--primary-text-color);
+
 }
 .auth-nav a {
     color: var(--secondary-text-color);
@@ -98,6 +119,16 @@ body{
 
 .current {
     color: var(--accent-color);
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;    
 }
 
 /* Герой */
@@ -149,6 +180,10 @@ body{
 
 .advantages {
     list-style: none;
+    display: flex;
+}
+.advantages .item:not(:last-child) {
+    margin-right: 30px;
 }
 
 .advantages h3 {
@@ -177,6 +212,19 @@ body{
 
 .work-list {
     list-style: none;
+    display: flex;
+}
+
+.work-list img {
+    display: block;
+}
+
+.work-list .photo {
+    width: calc((100%-60px)/3);
+}
+
+.work-list .photo:not(:last-child) {
+    margin-right: 30px;
 }
 
 /* Наша команда */
@@ -186,10 +234,19 @@ body{
 
 .team-cards {
     list-style: none;
+    display: flex;
 }
 
-.team-cards li {
+.team-cards .card {
     padding-bottom: 30px;
+    background-color: var(--white) ;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    width: 270px;
+}
+
+.team-cards .card:not(:last-child) {
+    margin-right: 30px;
 }
 
 .team-cards img {
@@ -263,12 +320,21 @@ body{
     list-style: none;
 }
 
-.nav-portfolio a,
 .cards-portfolio a {
     text-decoration: none;
 }
 
-.port-botton {
+.nav-portfolio {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-portfolio li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.port-button {
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -276,23 +342,33 @@ body{
     text-align: center;
     background-color: #F5F4FA;
     cursor: pointer;
+    border-radius: 4px;
 }
 
-.port-botton:hover, .port-botton:focus {
+.port-button:hover, .port-button:focus {
     background-color: var(--accent-color);
     color: var(--white);
 }
  
-.cards-portfolio img {
-    margin-bottom: 20px;
+.cards-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -18px;
 }
 
-.cards-portfolio p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.88;
-    color: #757575;
+.cards-portfolio .card {
+    width: 370px;
+    margin: 15px;
+}
 
+.cards-portfolio .card-down-part {
+    border-right: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+} 
+
+.cards-portfolio img {
+   display: block;
 }
 
 .cards-portfolio h2 {
@@ -301,12 +377,15 @@ body{
     letter-spacing: 0.06em;
     color: var(--primary-text-color);
     margin-bottom: 4px;
+    padding-top: 20px;
+    padding-left: 24px;
 }
 
-.nav-portfolio {
-    margin-bottom: 50px;
-}
-
-.cards-portfolio li {
-    padding-bottom: 20px;
+.cards-portfolio p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    color: #757575;
+    padding-left: 24px;
+    margin-bottom: 20px;
 }
