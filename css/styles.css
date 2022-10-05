@@ -353,7 +353,7 @@ body{
 .cards-portfolio {
     display: flex;
     flex-wrap: wrap;
-    margin: -18px;
+    margin: -15px;
 }
 
 .cards-portfolio .card {
