@@ -140,10 +140,6 @@ body{
     fill: currentColor;
 }
 
-.auth-nav .icon:focus, .auth-nav .icon:focus {
-    fill: var(--accent-color);
-}
-
 /* Герой */
 .hero {
     background-color: var(--secondary-bcg-color);
@@ -358,10 +354,6 @@ body{
     justify-content: center;
 }
 
-.client-cards div:hover, .client-cards div:focus  {
-    border: 1px solid var(--accent-color);
-}
-
 .client-cards li {
     margin-right: 30px;
 }
@@ -380,8 +372,12 @@ body{
     fill: #AFB1B8;
 }
 
-.client-cards .icon:hover, .client-cards .icon:focus {
+.client-cards div:hover .icon, .client-cards div:focus .icon {
     fill: var(--accent-color);
+}
+
+.client-cards div:hover, .client-cards div:focus {
+    border: 1px solid var(--accent-color);
 }
 
 
