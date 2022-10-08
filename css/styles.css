@@ -333,7 +333,7 @@ body{
     background-color: var(--accent-color);
 }
 
-.name-prof .icon:hover, .name-prof .icon:focus {
+.name-prof div:hover .icon, .name-prof div:focus .icon {
     fill: var(--white);
 }
 
