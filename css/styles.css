@@ -116,7 +116,7 @@ body{
     color: var(--secondary-text-color);
 }
 
-.current {
+.header .current {
     color: var(--accent-color);
 }
 
@@ -274,8 +274,10 @@ body{
 }
 
 .team-cards .name-prof {
-    padding: 30px 32px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
+    justify-content: center;
 }
 
 .team-cards .card:not(:last-child) {
@@ -299,41 +301,32 @@ body{
 .social-media {
     list-style: none;
     display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
-.name-prof div{
+.link-social {
     width: 44px;
     height: 44px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.team-cards .link-social{
     background-color: var(--white);
-}
-
-.social-media li {
-    margin-right: 10px;
-}
-
-.social-media li:last-child {
-    margin-right: 0;
-} 
-
-.link-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .name-prof .icon {
     fill: #AFB1B8;
 }
 
-.name-prof div:hover, .name-prof div:focus {
+.name-prof .link-social:hover, .name-prof .link-social:focus {
     background-color: var(--accent-color);
 }
 
-.name-prof div:hover .icon, .name-prof div:focus .icon {
+.name-prof .link-social:hover .icon, .name-prof .link-social:focus .icon {
     fill: var(--white);
 }
 
@@ -342,9 +335,10 @@ body{
 .client-cards {
     list-style: none;
     display: flex;
+    gap: 30px;
 }
 
-.client-cards div {
+.link-company {
     width: 170px;
     height: 92px;
     border: 1px solid #AFB1B8;
@@ -354,29 +348,15 @@ body{
     justify-content: center;
 }
 
-.client-cards li {
-    margin-right: 30px;
-}
-
-.client-cards li:last-child {
-    margin-right: 0;
-}
-
-.link-company {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .client-cards .icon {
     fill: #AFB1B8;
 }
 
-.client-cards div:hover .icon, .client-cards div:focus .icon {
+.link-company:hover .icon, .link-company:focus .icon {
     fill: var(--accent-color);
 }
 
-.client-cards div:hover, .client-cards div:focus {
+.link-company:hover, .link-company:focus {
     border: 1px solid var(--accent-color);
 }
 
@@ -443,13 +423,7 @@ address {
     display: block;
 }
 
-.footer-social div {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.footer-social .link-social {
     background-color: rgba(255, 255, 255, 0.1);;
 }
 
@@ -457,7 +431,7 @@ address {
     fill: var(--white);
 }
 
-.footer-social div:hover, .footer-social div:focus {
+.footer-social .link-social:hover, .footer-social .link-social:focus {
     background-color: var(--accent-color);
 }
 
@@ -470,6 +444,7 @@ address {
 
 .cards-portfolio a {
     text-decoration: none;
+    display: block;
 }
 
 .nav-portfolio {
@@ -533,6 +508,6 @@ address {
     color: #757575;
 }
 
-.cards-portfolio .card:hover {
+.cards-portfolio a:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
