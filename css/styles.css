@@ -50,14 +50,6 @@ body{
      margin: -1px;
  }
 
-/* Анімація */
-
-*:hover,
-*:focus {
-    transition: color 250ms var(--animation-timing-function),
-        background-color 250ms var(--animation-timing-function),
-        shadow 250ms var(--animation-timing-function);
-}
 
 /* Шапка */
 .header{
@@ -109,6 +101,8 @@ body{
     font-size: 14px;
     line-height: 1.14;
     text-decoration: none;
+
+    transition: color 250ms var(--animation-timing-function);
 }
 
 .site-nav a:hover, .site-nav a:focus, .auth-nav a:hover, .auth-nav a:focus {
@@ -208,6 +202,8 @@ body{
     border-radius: 4px;
     padding: 10px 32px;
     border: none;
+
+    transition: background-color 250ms var(--animation-timing-function);
 }
 
 .button:hover, .button:focus {
@@ -286,23 +282,22 @@ body{
 
 .work-list .work-thumb {
     position: absolute;
-    width: 370px;
+    width: 100%;
     height: 70px;
     background: rgba(47, 48, 58, 0.8);
     bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .work-text {
-    position: absolute;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-align: center;
     text-transform: uppercase;
     color: var(--white);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 
@@ -365,10 +360,14 @@ body{
 
 .team-cards .link-social{
     background-color: var(--white);
+
+    transition: background-color 250ms var(--animation-timing-function);
 }
 
 .name-prof .icon {
     fill: #AFB1B8;
+
+    transition: fill 250ms var(--animation-timing-function);
 }
 
 .name-prof .link-social:hover, .name-prof .link-social:focus {
@@ -395,10 +394,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: border 250ms var(--animation-timing-function);
 }
 
 .client-cards .icon {
     fill: #AFB1B8;
+
+    transition: fill 250ms var(--animation-timing-function);
 }
 
 .link-company:hover .icon, .link-company:focus .icon {
@@ -429,6 +432,10 @@ body{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+}
+
+.contact-list a {
+    transition: color 250ms var(--animation-timing-function);
 }
 
 .address {
@@ -473,7 +480,9 @@ address {
 }
 
 .footer-social .link-social {
-    background-color: rgba(255, 255, 255, 0.1);;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms var(--animation-timing-function);
 }
 
 .footer-social .icon {
@@ -482,60 +491,6 @@ address {
 
 .footer-social .link-social:hover, .footer-social .link-social:focus {
     background-color: var(--accent-color);
-}
-
-
-/* Модальне вікно */
-
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: 1;
-
-    transition: opasity 250ms var(--animation-timing-function);
-}
-
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.7);
-    opacity: 0;
-    visibility: hidden;
-}
-
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    width: 528px;
-    height: 581px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    opacity: 1;
-    background-color: var(--white);
-
-    transition: transform 250ms var(--animation-timing-function), opasity 250ms var(--animation-timing-function);
-}
-
-.modal .btn-close {
-    cursor: pointer;
-    border-radius: 50%;
-    border: none;
-    height: 30px;
-    width: 30px;
-    margin: 8px 8px 543px 490px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 
@@ -571,6 +526,10 @@ address {
     border-radius: 4px;
     border: none;
     padding: 6px 22px;
+
+    transition: color 250ms var(--animation-timing-function),
+            background-color 250ms var(--animation-timing-function),
+            box-shadow 250ms var(--animation-timing-function);
 }
 
 .port-button:hover, .port-button:focus {
@@ -611,6 +570,10 @@ address {
     color: #757575;
 }
 
+.cards-portfolio a{
+    transition: box-shadow 250ms var(--animation-timing-function);
+}
+
 .cards-portfolio a:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -625,7 +588,7 @@ address {
     display: inline-block;
     background-color: rgba(33, 150, 243, 0.9);
     width: 100%;
-    height: 100%;
+    height: 101%;
     top: 0;
     left: 0;
     padding: 63px 24px;
@@ -645,3 +608,57 @@ address {
     transform: translateY(0);
 }
 
+/* Модальне вікно */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+
+    transition: opaсity 250ms var(--animation-timing-function);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 528px;
+    height: 581px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    opacity: 1;
+    background-color: var(--white);
+
+    transition: transform 250ms var(--animation-timing-function), opacity 250ms var(--animation-timing-function);
+}
+
+.modal .btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
