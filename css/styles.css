@@ -424,6 +424,9 @@ body{
 
 .footer .container {
     display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: baseline;
 }
 
 .footer-left {
@@ -460,11 +463,6 @@ address {
     color: var(--accent-color);
 }
 
-.footer .container{
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
 .contact-list li {
     margin-bottom: 9px;
 }
@@ -473,17 +471,12 @@ address {
     margin-bottom: 0px;
 }
 
-.footer-social {
-    margin-right: 93px;
-}
-
 .footer b {
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--white);
     margin-bottom: 20px;
-    margin-top: 12px;
     display: block;
 }
 
@@ -501,6 +494,10 @@ address {
     background-color: var(--accent-color);
 }
 
+.footer-subscribe {
+    margin-left: auto;
+}
+
 .footer-subscribe form{
     display: flex;
 }
@@ -513,6 +510,9 @@ address {
     padding-left: 16px;
     width: 358px;
     height: 50px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-subscribe input::placeholder{
@@ -682,7 +682,6 @@ address {
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     width: 528px;
-    height: 581px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     opacity: 1;
@@ -730,11 +729,12 @@ address {
     position: relative;
 }
 
-.modal-form h2 {
-    font-weight: 700;
+.modal strong {
+    display: block;
     font-size: 20px;
     line-height: 1.15;
     margin-bottom: 2px;
+    text-align: center;
 }
 
 .modal .input-title{
@@ -747,33 +747,26 @@ address {
     margin-top: 10px;
 }
 
-
 .modal .input-row{
     display: block;
-    cursor: pointer;
     height: 40px;
     width: 448px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
+    outline: none;
 
     transition: border 250ms var(--animation-timing-function);
 }
 
-.modal .thumb {
-    position: absolute;
-    height: 40px;
-    width: 448px;
-    left:0;
-    bottom:0;
+.modal .input-name {
+    position: relative;
 }
 
 .form-input .icon{
     position: absolute;
-    top: 50%;
     left: 12px;
-    transform: translateY(-50%);
-    padding: 0;
+    bottom: 11px;
 
     transition: fill 250ms var(--animation-timing-function);
 }
@@ -784,9 +777,9 @@ address {
     padding: 12px 16px;
     height: 120px;
     width: 448px;
-    cursor: pointer;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    outline: none;
 
     transition: border 250ms var(--animation-timing-function);
 }
@@ -798,32 +791,31 @@ address {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.input-name .input-row:focus, .input-name textarea:focus {
+.input-name .input-row:focus, .input-name textarea:focus,
+.input-name .input-row:hover, .input-name textarea:hover {
     border-color: var(--accent-color);
 }
 
-.input-row:focus + .thumb .icon{
+.input-row:focus + .thumb .icon, .input-row:hover+.thumb .icon{
     fill: var(--accent-color);
-}
-
-.modal .policy-block{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
 }
 
 .modal .policy {
     font-size: 14px;
     line-height: 1.71;
     color: var(--secondary-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 8px;
 }
 
-.policy-block .link {
+.policy .link {
     color: var(--accent-color);
 }
 
-.policy-block input {
+.policy input {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -836,15 +828,15 @@ address {
     margin: -1px;
 }
 
-.policy-block .icon {
+.policy .icon {
     border: 2px solid #000000;
     border-radius: 2px;
     background-color: var(--white);
     fill: var(--white);
-    margin-right: 8.4px;
+    cursor: pointer;;
 }
 
-.policy-block input:checked + .icon{
+.policy input:checked + .icon{
     border: 2px solid var(--accent-color);
     background-color: var(--accent-color);
 }
