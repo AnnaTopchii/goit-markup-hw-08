@@ -796,7 +796,7 @@ address {
     border-color: var(--accent-color);
 }
 
-.input-row:focus + .thumb .icon, .input-row:hover+.thumb .icon{
+.input-row:focus + .icon, .input-row:hover + .icon{
     fill: var(--accent-color);
 }
 
