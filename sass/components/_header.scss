@@ -6,7 +6,14 @@
 .header__container{
     padding-top: 10px;
     padding-bottom: 10px;
-    max-width: 480px;
+    position: relative;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width:768px){
+    padding-top: 0;
+    padding-bottom: 0;}
 }
 
 .header__logo {
@@ -15,7 +22,6 @@
 
 .nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     font-weight: 500;
 }
@@ -25,12 +31,9 @@
     display: none;
 
     &.is-open {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        
-        width: 100vw;
-        height: 100vh;
+        position: absolute;
+        display: inline-block;
+        width: 100%;
         top: 0;
         left: 0;
         background-color: $white;
@@ -38,7 +41,20 @@
     }}
 }
 
+.menu-container {
+    @media screen and (min-width:768px){
+    display: flex;
+    align-items: center;
+    margin-left: 88px;
+}
+    @media screen and (min-width:1200px){
+    margin-left: 93px;}
+}  
+
 .btn-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     display: block;
     height: 40px;
     width: 40px;
@@ -46,25 +62,22 @@
     padding: 0;
     border: none;
     background-color: transparent;
+
+     @media screen and (min-width:768px){
+        display: none;}
 }
 
 .btn-menu__icon {
-    fill: $primary-text-color;
-}
+    fill: $primary-text-color;}
 
 .menu-container.is-open .btn-menu--open{
-        display: none;
-    }
+    display: none;}
 
 .btn-menu--close {
     display: none;
 
     .menu-container.is-open &{
         display: block;
-        position: absolute;
-        top: 10px;
-        right: 15px;
-
     }
 }
 
@@ -74,11 +87,22 @@
     flex-direction: column;
     gap: 32px;
     margin-bottom: 306px;
-    }
+
+    @media screen and (min-width:768px){
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 0px;}
+}
 
 .site-nav__link {
     font-size: 40px;
     color: $primary-text-color;
+
+    @media screen and (min-width:768px){
+    display: block;
+    font-size: 14px;
+    padding-top: 32px;
+    padding-bottom: 32px;}
 }
 
 .auth-nav {
@@ -87,17 +111,36 @@
     flex-direction: column;
     gap: 32px;
     margin-bottom: 64px;
+
+    @media screen and (min-width:768px){
+        flex-direction: column-reverse;
+        margin: 0 0 0 96px;
+        gap: 10px;}
+
+    @media screen and (min-width:1200px){
+        flex-direction: row-reverse;
+        gap: 30px;
+        margin: 0 0 0 315px;}    
 }
 
 .auth-nav__link {
     font-size: 24px;
+    line-height: 1.17;
     color: $secondary-text-color;
+
+    @media screen and (min-width:768px){
+        font-size: 12px;}
+
+    @media screen and (min-width:1200px){
+        font-size: 14px;
+        line-height: 1.14;}    
 }
 
+@media screen and (max-width:767px){
 .auth-nav__link--tel {
     font-size: 34px;
     color: $accent-color;
-}
+}}
 
 .site-nav__link, .auth-nav__link, .menu-socials__link {
     text-decoration: none;
@@ -129,6 +172,9 @@
 
 .menu-socials {
     display: flex;
+
+    @media screen and (min-width:768px){
+        display: none;}
 }
 
 .menu-socials__link{
@@ -143,10 +189,16 @@
 }
 
 .auth-nav__icon {
-    margin-right: 10px;
     fill: currentColor;
 
 @media screen and (max-width:767px){
-    display: none;
-}
+    display: none;}
+
+@media screen and (min-width:768px){
+margin-right: 8px;
+max-width: 14px;}
+
+@media screen and (min-width:1200px){
+margin-right: 10px;
+max-width: 16px;}
 }

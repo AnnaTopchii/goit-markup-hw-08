@@ -16,6 +16,12 @@
     &:hover, &:focus {
         border: 1px solid $accent-color;
         }
+
+    @media screen and (min-width:768px){
+    width: calc((768px - 90px) / 3); }   
+
+    @media screen and (min-width:1200px){
+    width: calc((1200px - 180px) / 6); } 
 }
 
 .clients__icon {

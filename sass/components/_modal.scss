@@ -35,6 +35,12 @@
     padding: 40px;
 
     transition: transform 250ms $animation-timing-function, opacity 250ms $animation-timing-function;
+
+    @media screen and (min-width:768px){
+        width: 450px;}  
+
+    @media screen and (min-width:1200px){
+        width: 528px;}  
 }
 
 .modal__caption {
@@ -43,6 +49,9 @@
     line-height: 1.5;
     margin-bottom: 2px;
     text-align: center;
+
+    @media screen and (min-width:1200px){
+        line-height: 1.15;}  
 }
 
 .modal__form {
@@ -147,6 +156,11 @@
     @extend %flex-centered;
     margin-bottom: 30px;
     gap: 8px;
+
+    
+    @media screen and (min-width:1200px){
+        font-size: 14px;
+        line-height: 1.71;}  
 }
 
 .modal__link {

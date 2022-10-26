@@ -9,6 +9,27 @@
     padding-bottom: 60px;
     align-items: center;
     text-align: center;
+
+    @media screen and (min-width:1200px){
+    flex-direction: row;
+    align-items: baseline;
+    gap: 93px;
+    text-align: left;
+    }
+}
+
+.footer__upper {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width:768px){
+    flex-direction: row;
+    align-items: baseline;
+    gap: 165px;
+    }
+
+    @media screen and (min-width:1200px){
+    gap: 70px;}
 }
 
 .contact-list {
@@ -17,10 +38,18 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media screen and (min-width:1200px){
+        gap: 9px;}
 }
 
 .footer__logo {
     color: $white;
+}
+
+.logo--footer{
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .contact-list__link {
@@ -38,10 +67,6 @@
     color: $white;
 }
 
-.footer__address {
-    margin-top: 20px;
-}
-
 .accent-text {
     line-height: 1.14;
     text-transform: uppercase;
@@ -50,8 +75,9 @@
     display: block;
 }
 
-.footer__socials {
-    margin-top: 60px;
+.footer__socials, .footer__subscribe {
+    @media screen and (max-width:767px){
+    margin-top: 60px;}
 }
 
 .socials__link--footer {
@@ -62,15 +88,25 @@
     fill: $white;
 }
 
+
 .footer__subscribe {
-    margin-top: 60px;
-}
+    @media screen and (min-width:768px) and (max-width:1199px){
+        margin-top: 60px;}
+
+    @media screen and (min-width:1200px){
+        margin-left: auto;
+}}
 
 .subscribe {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+    @media screen and (min-width:1200px){
+        flex-direction: row;
+        text-align: left;
+        gap: 12px;}
 }
 
 .subscribe__input {
@@ -88,8 +124,10 @@
         &::placeholder {
             font-size: 16px;
             line-height: 1.25; 
-            color: rgba(255, 255, 255, 0.6);
-}
+            color: rgba(255, 255, 255, 0.6);}
+
+     @media screen and (min-width:1200px){
+        width: 358px;}
 }
 
 .subscribe__button {
