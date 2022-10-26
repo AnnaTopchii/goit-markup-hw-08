@@ -8,15 +8,13 @@
 
 .advantages__list {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    column-gap: 30px;;
 }
 
 .advantages__title {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 10px;
-    text-align: center;
 }
 
 .advantages__text {
@@ -25,7 +23,7 @@
 }
 
 .advantages__thumb {
-    width: 450px;
+    width: 270px;
     height: 120px;
     border-radius: 4px;
     background-color: #F5F4FA;

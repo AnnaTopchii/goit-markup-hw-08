@@ -4,8 +4,7 @@
 
 .team__cards {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    column-gap: 30px;
 }
 
 .team__card {
@@ -16,7 +15,7 @@
 
 .team__text {
     padding-top: 30px;
-    padding-bottom: 24px;
+    padding-bottom: 30px;
     text-align: center;
     justify-content: center;
 }

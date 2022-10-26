@@ -1,11 +1,10 @@
 .clients {
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
 }
 
 .clients__link {
-    width: calc((480px - 60px) / 2);
+    width: 170px;
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
