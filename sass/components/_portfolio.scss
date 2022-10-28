@@ -48,8 +48,19 @@
 
 .products {
     display: flex;
+    justify-content: left;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+.products__card{
+width: 100%;
+
+@media screen and (min-width:768px){
+        width: 354px;}
+
+    @media screen and (min-width:1200px){
+        width: 370px;}   
 }
 
 .products__box {
@@ -61,6 +72,7 @@
 
 .products__img {
     display: block;
+    width: 100%;
 }
 
 .products__title {

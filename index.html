@@ -18,7 +18,7 @@
             <a href="./index.html" class="logo">Web<span class="header__logo">Studio</span></a>
             <button class="btn-menu btn-menu--open js-open-menu" type="button" aria-label="Перемикач мобільного меню" aria-expanded="false">
                 <svg class="btn-menu__icon" width="40" height="40">
-                    <use chref="./images/icons.svg#icon-menu_mobile"></use>
+                    <use href="./images/icons.svg#icon-menu_mobile"></use>
                 </svg>
             </button>
         <div class="menu-container js-menu-container" id="mobile-menu">
@@ -113,18 +113,27 @@
             <div class="container">
             <h2 class="title">Чим ми займаємося</h2>
             <ul class="work">
-                <li class="work__card"><img class="work__img" width="370" src="./images/image.jpg" alt="close-up-image-programer-working-his-desk-office">
+                <li class="work__card"><img class="work__img" 
+                    srcset="./images/app.jpg 370w, ./images/app@2x.jpg 740w"
+                    sizes="(min-width: 1200px) 33vw, 100vw"
+                    src="./images/app.jpg" alt="close-up-image-programer-working-his-desk-office">
                     <div class="work__thumb">
                         <p class="work__text">Десктопні додатки</p>
                     </div>
                 </li>
-                <li class="work__card"><img class="work__img" width="370" src="./images/image(1).jpg"
+                <li class="work__card"><img class="work__img" 
+                    srcset="./images/tel.jpg 370w, ./images/tel@2x.jpg 740w"
+                    sizes="(min-width: 1200px) 33vw, 100vw"
+                    src="./images/tel.jpg"
                         alt="smartphone-in-the-hand-in-front-of-laptop-with-interface-mobile-phones">
                     <div class="work__thumb">
                         <p class="work__text">Мобільні додатки</p>
                     </div>
                 </li>
-                <li class="work__card"><img class="work__img" width="370" src="./images/image(2).jpg"
+                <li class="work__card"><img class="work__img" 
+                    srcset="./images/color.jpg 370w, ./images/color@2x.jpg 740w"
+                    sizes="(min-width: 1200px) 33vw, 100vw"
+                    src="./images/color.jpg"
                         alt="creative-artist-web-design-with-working-colour-selection-graphic-tablet">
                     <div class="work__thumb">
                         <p class="work__text">Дизайнерські рішення</p>
@@ -140,7 +149,7 @@
             <h2 class="title">Наша команда</h2>
             <ul class="team__cards">
                 <li class="team__card">
-                    <img width="270" src="./images/image(3).jpg" alt="Ігор Дем'яненко">
+                    <img srcset="./images/ihor.jpg 1x, ./images/ihor@2x.jpg 2x" src="./images/ihor.jpg" alt="Ігор Дем'яненко">
                     <div class="team__text">
                     <h3 class="team__name">Ігор Дем'яненко</h3>
                     <p class="team__prof">Product Designer</p>
@@ -172,7 +181,7 @@
                     </ul>
                 </div></li>
                 <li class="team__card">
-                   <img width="270" src="./images/image(4).jpg" alt="Ольга Рєпіна">
+                   <img srcset="./images/olha.jpg 1x, ./images/olha@2x.jpg 2x" src="./images/olha.jpg" alt="Ольга Рєпіна">
                    <div class="team__text">
                    <h3 class="team__name">Ольга Рєпіна</h3>
                    <p class="team__prof">Frontend Developer</p>
@@ -204,7 +213,7 @@
                 </ul>
                 </div></li>
                 <li class="team__card">
-                   <img width="270" src="./images/image(5).jpg" alt="Микола Тарасов">
+                   <img srcset="./images/mykola.jpg 1x, ./images/mykola@2x.jpg 2x" src="./images/mykola.jpg" alt="Микола Тарасов">
                    <div class="team__text">
                    <h3 class="team__name">Микола Тарасов</h3>
                    <p class="team__prof">Marketing</p>
@@ -236,7 +245,7 @@
                 </ul>
                 </div></li>
                 <li class="team__card">
-                   <img width="270" src="./images/image(6).jpg" alt="Михайло Єрмаков">
+                   <img srcset="./images/mykhailo.jpg 1x, ./images/mykhailo@2x.jpg 2x" src="./images/mykhailo.jpg" alt="Михайло Єрмаков">
                    <div class="team__text">
                    <h3 class="team__name">Михайло Єрмаков</h3>
                    <p class="team__prof">UI Designer</p>
@@ -276,7 +285,7 @@
             <div class="container">
                 <h2 class="title">Постійні клієнти</h2>
                 <ul class="clients">
-                    <li>
+                    <li class="clients__card">
                         <a class="clients__link" href="">
                                 <svg class="clients__icon" width="41" height="47">
                                     <use href="./images/icons.svg#icon-company1"></use>
