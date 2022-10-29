@@ -96,13 +96,15 @@ width: 100%;
 
 .products__overlay {
     position: absolute;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(33, 150, 243, 0.9);
     width: 100%;
     height: 101%;
     top: 0;
     left: 0;
-    padding: 77px 24px;
+    padding: 10px 24px;
     transform: translateY(100%);
 
     transition: transform 250ms $animation-timing-function;
